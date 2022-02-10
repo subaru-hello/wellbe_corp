@@ -44,3 +44,6 @@ heroku
 - Sponsorテーブル
   name
   product
+  
+ER図
+https://drive.google.com/file/d/1KYM1e9slZtQduJiG1sV7kB5tQjIygJUj/view?usp=sharing
