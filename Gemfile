@@ -24,9 +24,8 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-# Use Active Storage variant
-# gem 'image_processing', '~> 1.2'
-
+gem 'jsonapi-serializer'
+gem 'rack-cors'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
@@ -38,6 +37,26 @@ end
 group :development do
   gem 'foreman'
   gem 'rubocop', require: false
+  # Code check
+  gem 'brakeman', require: false
+  gem 'bullet'
+  gem 'bundler-audit', require: false
+  gem 'prettier'
+  gem 'rails_best_practices', require: false
+  gem 'rubocop-performance'
+  gem 'rubocop-rails'
+  gem 'rubocop-rspec', require: false
+  # debug
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'pry-byebug'
+  # test
+  gem 'factory_bot_rails'
+  gem 'guard-rspec', require: false
+  gem 'rspec-rails', '~> 4.0.2'
+end
+
+group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 4.1.0'
   # Display performance information such as SQL time and flame graphs for each request in your browser.

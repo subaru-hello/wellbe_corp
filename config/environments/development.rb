@@ -31,7 +31,6 @@ Rails.application.configure do
 
     config.cache_store = :null_store
   end
-
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :local
 
@@ -39,7 +38,6 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = false
 
   config.action_mailer.perform_caching = false
-
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 
@@ -73,6 +71,9 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
-  # Uncomment if you wish to allow Action Cable access from any origin.
+  Rails.application.routes.default_url_options[:host] = 'localhost'
+  Rails.application.routes.default_url_options[:port] = 3000
+  config.web_console.whitelisted_ips = '172.27.0.1'
+  config.web_console.whitelisted_ips = '0.0.0.0/0'
   # config.action_cable.disable_request_forgery_protection = true
 end

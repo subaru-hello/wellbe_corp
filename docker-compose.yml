@@ -1,0 +1,35 @@
+
+version: '3'
+services:
+  db:
+    volumes:
+      - ./mysql/db:/docker-entrypoint-initdb.d  #初期データをマウントする場所を作成
+    image: oilrmutp57/mysql5.7:1.0
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_PASSWORD: password
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+    ports:
+      - '43306:3306'
+    command: --default-authentication-plugin=mysql_native_password
+  web:
+    build: .
+    command: bash -c "bundle exec foreman start -p 3000"
+    volumes:
+      - .:/wellbe_corp
+       # 1. exclude volumes
+      - /app/vendor
+      - /app/tmp
+      - /app/log
+      - /app/.git
+    ports:
+      - "3000:3000"
+    environment:
+      API_DOMAIN: "http://0.0.0.0:3000"
+    depends_on:
+      - db
+    stdin_open: true
+    tty: true
+volumes:
+  mysql-data:
+    driver: local
