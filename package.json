@@ -1,14 +1,14 @@
 {
-  "name": "wellbe-corp",
+  "name": "welbe-corp",
   "private": true,
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
+    "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "5.4.3",
-    "@vue/cli-plugin-eslint": "^4.5.15",
-    "eslint": "^8.9.0",
-    "prettier": "2.5.1",
-    "vue": "^3.2.30",
+    "turbolinks": "^5.2.0",
+    "vue": "^3.2.31",
+    "vue-cli": "^2.9.6",
     "vue-loader": "^17.0.0",
     "vue-template-compiler": "^2.6.14",
     "webpack": "^4.46.0",
@@ -16,9 +16,10 @@
   },
   "version": "0.1.0",
   "devDependencies": {
+    "@vue/compiler-sfc": "^3.2.31",
     "webpack-dev-server": "^3"
- },
+  },
   "scripts": {
-		  "fmt": "prettier --write app/**/**/*.{js,rb,vue} app/**/*.{js,rb,vue} app/**/**/**/*.{js,rb,vue} "
-				  }
+    "fmt": "prettier --write app/**/**/*.{js,rb,vue} app/**/*.{js,rb,vue} app/**/**/**/*.{js,rb,vue} "
+  }
 }

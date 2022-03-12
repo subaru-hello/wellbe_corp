@@ -15,6 +15,8 @@ gem 'puma', '~> 5.0'
 gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 5.0'
+# Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
+gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
@@ -30,13 +32,22 @@ gem 'bootsnap', '>= 1.4.4', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'capybara'
+end
+
+group :test do
+  gem 'webdrivers'
+end
+
+group :development do
+  gem 'foreman'
+  gem 'rubocop', require: false
   # Code check
   gem 'brakeman', require: false
   gem 'bullet'
   gem 'bundler-audit', require: false
   gem 'prettier'
   gem 'rails_best_practices', require: false
-  gem 'rubocop', '~> 1.10', require: false
   gem 'rubocop-performance'
   gem 'rubocop-rails'
   gem 'rubocop-rspec', require: false
@@ -58,7 +69,6 @@ group :development do
   gem 'listen', '~> 3.3'
   gem 'rack-mini-profiler', '~> 2.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'foreman'
   gem 'spring'
 end
 
