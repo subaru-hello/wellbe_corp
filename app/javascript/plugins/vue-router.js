@@ -1,39 +1,38 @@
 // import Vue from 'vue';
-import { createWebHistory, createRouter } from "vue-router";
+import { createWebHistory, createRouter } from 'vue-router'
 // import * as VueRouter from 'vue-router';
-import Top from '../pages/top/Index';
-import Competition from '../pages/competitions/Index.vue';
-import Member from '../pages/members/Index.vue';
-import Record from '../pages/records/Index.vue';
-import Sponsor from '../pages/sponsors/Index.vue';
+import Top from '../pages/top/Index'
+import Competition from '../pages/competitions/Index.vue'
+import Member from '../pages/members/Index.vue'
+import Record from '../pages/records/Index.vue'
+import Sponsor from '../pages/sponsors/Index.vue'
 
-
-const routes =  [
+const routes = [
   {
     path: '/',
-    component: Top
+    component: Top,
   },
   {
     path: '/competitions',
-    component: Competition 
+    component: Competition,
   },
   {
     path: '/members',
-    component: Member
+    component: Member,
   },
   {
     path: '/records',
-    component: Record 
+    component: Record,
   },
   {
     path: '/sponsors',
-    component: Sponsor
+    component: Sponsor,
   },
 ]
 
 const router = createRouter({
-    history: createWebHistory(),
-    routes,
-  });
+  history: createWebHistory(),
+  routes,
+})
 
-export default router;
+export default router

@@ -1,3 +1,3 @@
 <template>
-<p>記録です</p>
+  <p>記録です</p>
 </template>
