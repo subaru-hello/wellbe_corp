@@ -1,11 +1,11 @@
 // import Vue from 'vue';
 import { createWebHistory, createRouter } from 'vue-router'
 // import * as VueRouter from 'vue-router';
-import Top from '../pages/top/Index'
-import Competition from '../pages/competitions/Index.vue'
-import Member from '../pages/members/Index.vue'
-import Record from '../pages/records/Index.vue'
-import Sponsor from '../pages/sponsors/Index.vue'
+import Top from '../pages/top/WellbeIndex'
+import Competition from '../pages/competitions/CompetitionIndex.vue'
+import Member from '../pages/members/MemberIndex.vue'
+import Record from '../pages/records/RecordIndex.vue'
+import Sponsor from '../pages/sponsors/SponsorIndex.vue'
 
 const routes = [
   {
