@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="container mx-auto mt-28 px-5 flex">
   <p>{{message}}</p>
 </div>
 </template>
