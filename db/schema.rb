@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -12,5 +10,65 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2022_03_13_232034) do
+
+  create_table "accounts", charset: "utf8mb4", force: :cascade do |t|
+    t.bigint "profile_id"
+    t.string "name"
+    t.string "link"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["profile_id"], name: "index_accounts_on_profile_id"
+  end
+
+  create_table "competitions", charset: "utf8mb4", force: :cascade do |t|
+    t.string "name"
+    t.integer "entry_fee"
+    t.string "held_place"
+    t.string "border_time"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "crues", charset: "utf8mb4", force: :cascade do |t|
+    t.string "nickname"
+    t.string "email", null: false
+    t.string "password"
+    t.string "password_confirmation"
+    t.date "birthday"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["email"], name: "index_crues_on_email", unique: true
+  end
+
+  create_table "profiles", charset: "utf8mb4", force: :cascade do |t|
+    t.bigint "crue_id"
+    t.string "ambition"
+    t.string "favorite_food"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["crue_id"], name: "index_profiles_on_crue_id"
+  end
+
+  create_table "records", charset: "utf8mb4", force: :cascade do |t|
+    t.bigint "crue_id"
+    t.bigint "competition_id"
+    t.string "group", null: false
+    t.string "race_result", null: false
+    t.string "rane"
+    t.string "wind", null: false
+    t.string "weather"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["competition_id"], name: "index_records_on_competition_id"
+    t.index ["crue_id"], name: "index_records_on_crue_id"
+  end
+
+  create_table "sponsors", charset: "utf8mb4", force: :cascade do |t|
+    t.string "name"
+    t.string "product"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
 end

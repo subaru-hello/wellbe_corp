@@ -1,0 +1,2 @@
+class Crue < ApplicationRecord
+end
