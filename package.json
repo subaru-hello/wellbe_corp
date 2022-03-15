@@ -33,6 +33,7 @@
   },
   "scripts": {
     "fmt": "prettier --write app/**/**/*.{js,vue} app/**/*.{js,vue} app/**/**/**/*.{js,vue} ",
+    "rbfmt": "bundle exec rbprettier --write '**/*.rb' '**/**/*.rb'",
     "lint": "eslint --fix app/**/**/*.{js,vue} && eslint --fix app/**/**/*.{js,vue}"
   },
   "lint-staged": {
