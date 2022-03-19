@@ -1,4 +1,4 @@
 FactoryBot.define do
-  factory :account do
+  factory :club_team do
   end
 end

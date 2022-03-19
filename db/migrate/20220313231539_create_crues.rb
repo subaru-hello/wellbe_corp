@@ -7,7 +7,6 @@ class CreateCrues < ActiveRecord::Migration[6.1]
       t.string :email, null: false, index: { unique: true }
       t.string :password
       t.string :password_confirmation
-      t.date :birthday
       t.timestamps
     end
   end

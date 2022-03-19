@@ -7,6 +7,7 @@ class CreateCompetitions < ActiveRecord::Migration[6.1]
       t.integer :entry_fee
       t.string :held_place
       t.string :border_time
+      t.date :held_date
       t.timestamps
     end
   end

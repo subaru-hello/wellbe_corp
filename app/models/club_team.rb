@@ -1,0 +1,2 @@
+class ClubTeam < ApplicationRecord
+end
