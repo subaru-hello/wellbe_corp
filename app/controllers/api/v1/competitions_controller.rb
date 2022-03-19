@@ -5,7 +5,10 @@ module Api
     class CompetitionsController < ApplicationController
       def new; end
 
-      def index; end
+      def index
+        @competitions = Competition.all
+        render json: @competitions
+      end
 
       def create; end
     end

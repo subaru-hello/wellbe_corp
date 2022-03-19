@@ -1,6 +1,6 @@
 <template>
   <div id="vue-app">
-    <!-- <TheHeader /> -->
+    <TheHeader />
     <div class="mt-12">
       <router-view />
     </div>
@@ -9,10 +9,18 @@
 </template>
 
 <script>
+import TheHeader from './components/global/TheHeader.vue'
+import { ref } from 'vue'
+
 export default {
-  data() {
+  components: {
+    TheHeader,
+  },
+  setup() {
+    const message = ref('Wellbeへようこそ')
     return {
-      message: 'WellBeへようこそ',
+      message,
+      TheHeader,
     }
   },
 }

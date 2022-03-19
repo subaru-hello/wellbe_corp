@@ -1,6 +1,8 @@
-PREFECTURES_COUNT = 47 #
-for id in 1..50
- PREFECTURE_CODE = (id % PREFECTURES_COUNT) + 1
+# frozen_string_literal: true
+
+PREFECTURES_COUNT = 47
+(1..50).each do |id|
+  PREFECTURE_CODE = (id % PREFECTURES_COUNT) + 1
   Crue.seed_once(
     {
       id: id,
@@ -51,11 +53,5 @@ for id in 1..50
       birthday: Faker::Date.between(from: 2.days.ago, to: Date.today)
     }
   )
-  Account.seed_once(
-    {
-      id: id,
-      name: Faker::App.name,
-      link: Faker::App.name
-    }
-  )
+  Account.seed_once({ id: id, name: Faker::App.name, link: Faker::App.name })
 end
