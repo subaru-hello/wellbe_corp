@@ -105,6 +105,8 @@ GEM
     factory_bot_rails (6.2.0)
       factory_bot (~> 6.2.0)
       railties (>= 5.0.0)
+    faker (2.18.0)
+      i18n (>= 1.6, < 2)
     ffi (1.15.5)
     foreman (0.87.2)
     formatador (1.1.0)
@@ -275,6 +277,9 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
+    seed-fu (2.3.9)
+      activerecord (>= 3.1)
+      activesupport (>= 3.1)
     selenium-webdriver (4.1.0)
       childprocess (>= 0.5, < 5.0)
       rexml (~> 3.2, >= 3.2.5)
@@ -338,6 +343,7 @@ DEPENDENCIES
   byebug
   capybara
   factory_bot_rails
+  faker
   foreman
   guard-rspec
   jbuilder (~> 2.7)
@@ -357,6 +363,7 @@ DEPENDENCIES
   rubocop-rails
   rubocop-rspec
   sass-rails (>= 6)
+  seed-fu
   spring
   tailwindcss-rails (~> 2.0)
   turbolinks (~> 5)

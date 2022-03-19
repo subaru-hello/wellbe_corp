@@ -1,19 +1,26 @@
 <template>
-  <div class="container mx-auto mt-28 px-5 flex">
-    <p>{{ message }}</p>
-    <router-link to="/competitions">出走競技会予定</router-link>
-    <router-link to="/records">記録集</router-link>
-    <router-link to="/sponsors">スポンサー</router-link>
-    <router-link to="/members">部員紹介</router-link>
+  <div id="vue-app">
+    <TheHeader />
+    <div class="mt-12">
+      <router-view />
+    </div>
+    <!-- <TheFooter /> -->
   </div>
-  <router-view />
 </template>
 
 <script>
+import TheHeader from './components/global/TheHeader.vue'
+import { ref } from 'vue'
+
 export default {
-  data() {
+  components: {
+    TheHeader,
+  },
+  setup() {
+    const message = ref('Wellbeへようこそ')
     return {
-      message: 'WellBeへようこそ',
+      message,
+      TheHeader,
     }
   },
 }
