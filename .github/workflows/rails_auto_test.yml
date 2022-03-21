@@ -77,6 +77,6 @@ jobs:
       - name: Run Breakman
         run: |
           bundle exec brakeman -q -w2
-      - name: Run Rubocop
-        run: |
-          bundle exec rubocop -A
+      # - name: Run Rubocop
+      #   run: |
+      #     bundle exec rubocop -A
