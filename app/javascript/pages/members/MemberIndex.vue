@@ -1,5 +1,5 @@
 <template>
-  <p>メンバー情報です</p>
+  <p class="">メンバー情報です</p>
   <div v-for="(user, index) in users" :key="index">
     <p>{{ user.nickname }}</p>
     <p>{{ user.email }}</p>

@@ -1,5 +1,5 @@
 <template>
-  <p>直近の競技会情報です</p>
+  <p class="">直近の競技会情報です</p>
 
   <div v-for="(competition, index) in competitions" :key="index">
     <p>{{ competition.name }}</p>
