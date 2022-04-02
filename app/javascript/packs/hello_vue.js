@@ -1,5 +1,5 @@
 import { createApp, h } from 'vue'
-import App from '../App.vue'
+import App from '../home.vue'
 import router from '../plugins/vue-router'
 document.addEventListener('DOMContentLoaded', () => {
   const app = createApp({
